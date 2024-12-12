@@ -1,12 +1,8 @@
-# DEPRECATED
-
-well, not really deprecated but it represents a point-in-time and won't be changing
-
 ___
 
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/types-all/main.svg)](https://results.pre-commit.ci/latest/github/asottile/types-all/main)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/types-all-v2/main.svg)](https://results.pre-commit.ci/latest/github/asottile/types-all-v2/main)
 
-types-all
+types-all-v2
 =========
 
 A shim for the typeshed changes in mypy 0.900
@@ -14,7 +10,7 @@ A shim for the typeshed changes in mypy 0.900
 ## installation
 
 ```bash
-pip install types-all
+pip install types-all-v2
 ```
 
 ## why
@@ -32,7 +28,7 @@ error: Library stubs not installed for "toml" (or incompatible with Python 3.8)
     rev: v0.902
     hooks:
     -   id: mypy
-        additional_dependencies: [types-all]
+        additional_dependencies: [types-all-v2]
 ```
 
 [typeshed]: https://github.com/python/typeshed
