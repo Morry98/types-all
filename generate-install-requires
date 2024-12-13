@@ -10,7 +10,10 @@ def main() -> int:
         repo = 'https://github.com/python/typeshed'
         subprocess.check_call(('git', 'clone', '--depth=1', repo, tmpdir))
         stubs_dir = os.path.join(tmpdir, 'stubs')
-        install_requires = sorted(f'types-{d}' for d in os.listdir(stubs_dir))
+        stubs = os.listdir(stubs_dir)
+        if "redis" not in stubs:
+            stubs.append("redis")
+        install_requires = sorted(f'types-{d}' for d in stubs)
     install_requires.append('sqlalchemy[mypy]')
     install_requires.append('pydantic')
     install_requires.append('pandas-stubs')
